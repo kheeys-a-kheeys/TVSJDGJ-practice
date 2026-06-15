@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://ckgi5qsv55wnf"]
 
-[ext_resource type="Texture2D" uid="uid://boyee884h2dtg" path="res://icon.svg" id="1_62w18"]
+[ext_resource type="Script" uid="uid://cwxrhrdcp1bgu" path="res://World/table.gd" id="1_folwd"]
 
 [node name="World" type="Node2D" unique_id=52683666]
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=1599485059]
-position = Vector2(-74, -71)
-texture = ExtResource("1_62w18")
+[node name="table" type="Node2D" parent="." unique_id=300585880]
+script = ExtResource("1_folwd")
