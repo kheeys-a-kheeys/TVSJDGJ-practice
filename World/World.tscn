@@ -1,8 +1,18 @@
 [gd_scene format=3 uid="uid://ckgi5qsv55wnf"]
 
 [ext_resource type="Script" uid="uid://cwxrhrdcp1bgu" path="res://World/table.gd" id="1_folwd"]
+[ext_resource type="Script" uid="uid://yqvbomoc52ti" path="res://World/World.gd" id="1_mlekv"]
+[ext_resource type="Script" uid="uid://bkofqkhl1m50c" path="res://World/radar.gd" id="2_y6flb"]
+[ext_resource type="Script" uid="uid://271u2gj5rob" path="res://World/cloth.gd" id="4_il6x7"]
 
 [node name="World" type="Node2D" unique_id=52683666]
+script = ExtResource("1_mlekv")
 
 [node name="table" type="Node2D" parent="." unique_id=300585880]
 script = ExtResource("1_folwd")
+
+[node name="radar" type="Node2D" parent="." unique_id=1702027917]
+script = ExtResource("2_y6flb")
+
+[node name="cloth" type="Node2D" parent="." unique_id=1736071747]
+script = ExtResource("4_il6x7")
