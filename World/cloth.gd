@@ -24,7 +24,7 @@ func test_region_finder(radar: Array) -> void:
 			row.append(zoning[j][i])
 		print(row)
 
-# use connected-component labeling to find regions instead of the batshit recursion I tried before
+# use connected-component labeling to distinguish regions instead of the batshit recursion I tried before
 # based on this guide: https://www.youtube.com/watch?v=ticZclUYy88
 func find_regions(radar: Array) -> Array:
 	

@@ -6,15 +6,23 @@ extends Node2D
 @export var Width = 10
 @export var Heigt = 10
 
-#func _ready() -> void:
-	#var table = build_array()
-	#table = bury_mines(table)
-	#print(table.size())
-	#print_table(table)
-
-func build_table() -> Array:
+func build_table(safe_point: Vector2i) -> Array:
+	
 	var table = build_array()
 	table = bury_mines(table)
+	
+	table[safe_point.x][safe_point.y] = 0
+	# let's also ensure the area around the starting point is safe...
+	var sweep = [Vector2i(-1, -1), Vector2i(0, -1), Vector2i(1, -1), 
+				 Vector2i(-1, 0), Vector2i(1, 0), 
+				 Vector2i(-1, 1), Vector2i(0, 1), Vector2i(1, 1)]
+	for k in sweep.size():
+		var targe = safe_point + sweep[k]
+		var bindx = maxi(mini(targe.x, table.size() - 1), 0)
+		var bindy = maxi(mini(targe.y, table[0].size() - 1), 0)
+		if (bindx == targe.x && bindy == targe.y): # skip if out of bounds
+			table[targe.x][targe.y] = 0
+	
 	return table
 
 # to visualize the table for debugging

@@ -4,6 +4,101 @@
 [ext_resource type="Script" uid="uid://yqvbomoc52ti" path="res://World/World.gd" id="1_mlekv"]
 [ext_resource type="Script" uid="uid://bkofqkhl1m50c" path="res://World/radar.gd" id="2_y6flb"]
 [ext_resource type="Script" uid="uid://271u2gj5rob" path="res://World/cloth.gd" id="4_il6x7"]
+[ext_resource type="Texture2D" uid="uid://cjmqo5qfh467i" path="res://Assets/Tile1.png" id="5_kpwrl"]
+[ext_resource type="Texture2D" uid="uid://tro72kawhjp7" path="res://Assets/Tile2.png" id="6_21v8o"]
+[ext_resource type="Texture2D" uid="uid://dhvsdhywqo4i2" path="res://Assets/Tile3.png" id="7_lcvgy"]
+[ext_resource type="Texture2D" uid="uid://dn7unlyiy7j0c" path="res://Assets/Tile4.png" id="8_jacc8"]
+[ext_resource type="Texture2D" uid="uid://dmw8x8g6jvr1k" path="res://Assets/Tile5.png" id="9_hev0n"]
+[ext_resource type="Texture2D" uid="uid://cxbemdrv2efmf" path="res://Assets/Tile6.png" id="10_7in0u"]
+[ext_resource type="Texture2D" uid="uid://celcbbcqrmcs7" path="res://Assets/Tile7.png" id="11_vdgnt"]
+[ext_resource type="Texture2D" uid="uid://cinllvrx6610x" path="res://Assets/Tile8.png" id="12_3ql1f"]
+[ext_resource type="Texture2D" uid="uid://bov5h4dxjekjq" path="res://Assets/TileEmpty.png" id="13_eucu0"]
+[ext_resource type="Texture2D" uid="uid://bs1sbt0sgo4kf" path="res://Assets/TileMine.png" id="14_c4j8x"]
+[ext_resource type="Texture2D" uid="uid://c8j3qfgfaj3ro" path="res://Assets/TileExploded.png" id="15_jacc8"]
+[ext_resource type="Texture2D" uid="uid://bwqhe4he81k1u" path="res://Assets/TileFlag.png" id="16_hev0n"]
+[ext_resource type="Texture2D" uid="uid://dpmfst5wrwxnk" path="res://Assets/TileUnknown.png" id="17_7in0u"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2neov"]
+resource_name = "Tile1"
+texture = ExtResource("5_kpwrl")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_daix3"]
+resource_name = "Tile2"
+texture = ExtResource("6_21v8o")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ox6yj"]
+resource_name = "Tile3"
+texture = ExtResource("7_lcvgy")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nn5t2"]
+resource_name = "Tile4"
+texture = ExtResource("8_jacc8")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_16wen"]
+resource_name = "Tile5"
+texture = ExtResource("9_hev0n")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ojrop"]
+resource_name = "Tile6"
+texture = ExtResource("10_7in0u")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r2cft"]
+resource_name = "Tile7"
+texture = ExtResource("11_vdgnt")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l3g6b"]
+resource_name = "Tile8"
+texture = ExtResource("12_3ql1f")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f4rq3"]
+resource_name = "TileEmpty"
+texture = ExtResource("13_eucu0")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pnyxe"]
+resource_name = "TileMine"
+texture = ExtResource("14_c4j8x")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ncvay"]
+sources/0 = SubResource("TileSetAtlasSource_2neov")
+sources/1 = SubResource("TileSetAtlasSource_daix3")
+sources/2 = SubResource("TileSetAtlasSource_ox6yj")
+sources/3 = SubResource("TileSetAtlasSource_nn5t2")
+sources/4 = SubResource("TileSetAtlasSource_16wen")
+sources/5 = SubResource("TileSetAtlasSource_ojrop")
+sources/6 = SubResource("TileSetAtlasSource_r2cft")
+sources/7 = SubResource("TileSetAtlasSource_l3g6b")
+sources/8 = SubResource("TileSetAtlasSource_f4rq3")
+sources/9 = SubResource("TileSetAtlasSource_pnyxe")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vdgnt"]
+resource_name = "TileExploded"
+texture = ExtResource("15_jacc8")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ql1f"]
+resource_name = "TileFlag"
+texture = ExtResource("16_hev0n")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eucu0"]
+resource_name = "TileUnknown"
+texture = ExtResource("17_7in0u")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_c4j8x"]
+sources/0 = SubResource("TileSetAtlasSource_vdgnt")
+sources/1 = SubResource("TileSetAtlasSource_3ql1f")
+sources/2 = SubResource("TileSetAtlasSource_eucu0")
 
 [node name="World" type="Node2D" unique_id=52683666]
 script = ExtResource("1_mlekv")
@@ -16,3 +111,9 @@ script = ExtResource("2_y6flb")
 
 [node name="cloth" type="Node2D" parent="." unique_id=1736071747]
 script = ExtResource("4_il6x7")
+
+[node name="TableGraphic" type="TileMapLayer" parent="." unique_id=1728886194]
+tile_set = SubResource("TileSet_ncvay")
+
+[node name="ClothGraphic" type="TileMapLayer" parent="." unique_id=584983260]
+tile_set = SubResource("TileSet_c4j8x")
